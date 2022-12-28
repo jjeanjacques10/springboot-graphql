@@ -1,14 +1,12 @@
 package com.jjeanjacques10.springbootgraphql.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class Book {
 
     @Id
+    @GeneratedValue
     private Long id;
 
     private String title;
