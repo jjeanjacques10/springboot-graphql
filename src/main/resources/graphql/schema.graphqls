@@ -1,0 +1,27 @@
+type Query {
+    wizards: [Wizard]
+    wizardById(id: ID!): Wizard
+}
+
+type Mutation {
+    addBook(book: BookInput): Book
+}
+
+input BookInput {
+    title: String!
+    publisher: String
+    wizardId: ID!
+}
+
+type Wizard {
+    id: ID!
+    name: String!
+    rank: String!
+    books: [Book]
+}
+
+type Book {
+    id: ID!
+    title: String!
+    publisher: String
+}

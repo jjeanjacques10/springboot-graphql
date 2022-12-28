@@ -13,12 +13,15 @@ public class Wizard {
 
     private String name;
 
+    private String rank;
+
     @OneToMany(mappedBy = "wizard", cascade = CascadeType.ALL)
     private List<Book> books = new ArrayList<>();
 
-    public Wizard(Long id, String name) {
+    public Wizard(Long id, String name, String rank) {
         this.id = id;
         this.name = name;
+        this.rank = rank;
     }
 
     public Wizard() {
@@ -38,6 +41,14 @@ public class Wizard {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getRank() {
+        return rank;
+    }
+
+    public void setRank(String rank) {
+        this.rank = rank;
     }
 
     public List<Book> getBooks() {

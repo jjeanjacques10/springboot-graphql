@@ -21,12 +21,12 @@ public class SpringbootGraphqlApplication {
     @Bean
     ApplicationRunner applicationRunner(WizardRepository wizardRepository, BookRepository bookRepository) {
         return args -> {
-            Wizard rudeusGreyrat = wizardRepository.save(new Wizard(null, "Rudeus Greyrat"));
-            Wizard roxyMigurdia = wizardRepository.save(new Wizard(null, "Roxy Migurdia"));
+            Wizard rudeusGreyrat = wizardRepository.save(new Wizard(null, "Rudeus Greyrat","A «Adventure Guild»"));
+            Wizard roxyMigurdia = wizardRepository.save(new Wizard(null, "Roxy Migurdia", "Water King"));
             bookRepository.saveAll(List.of(
-                    new Book("Old fire dragon", "School of magic", rudeusGreyrat),
-                    new Book("Old water dragon", "School of magic", roxyMigurdia),
-                    new Book("Old air dragon", "School of magic", rudeusGreyrat)
+                    new Book("Old fire dragon", "Ranoa Magic Academy", rudeusGreyrat),
+                    new Book("Old water dragon", "Ranoa Magic Academy", roxyMigurdia),
+                    new Book("Old air dragon", "Ranoa Magic Academy", rudeusGreyrat)
             ));
         };
     }
