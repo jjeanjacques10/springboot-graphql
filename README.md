@@ -58,6 +58,7 @@ type Mutation {
     addBook(book: BookInput): Book
 }
 ```
+- Access this portal to test your queries: http://localhost:8080/graphiql?path=/graphql
 
 ---
 Developed by [jjeanjacques10](https://github.com/jjeanjacques10)
