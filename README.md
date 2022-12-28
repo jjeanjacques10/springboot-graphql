@@ -1,6 +1,6 @@
 # Spring Boot GraphQL
 
-Demo project for Spring Boot using GraphQL. Created from this youtube
+Demo project for Spring Boot using GraphQL. Created from this YouTube
 video [🍃 Introduction to Spring GraphQL with Spring Boot](https://youtu.be/atA2OovQBic)
 
 ### Queries
@@ -39,7 +39,7 @@ query {
 
 - Create a new book
 
-```
+``` graphql
 mutation {
   addBook(book: {title: "New earth dragon", publisher: "Ranoa Magic Academy", wizardId: 1}){
     id,
